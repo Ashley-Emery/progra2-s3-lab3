@@ -10,4 +10,11 @@ package progra2.s3.lab3;
  */
 public class Tablero {
     
+    public final int tamano = 9;
+    public final int[][] tablero = new int[tamano][tamano];
+    public final boolean[][] fijos = new boolean[tamano][tamano];
+    public final int[][] solucion = new int[tamano][tamano];
+    
+    
+    
 }
