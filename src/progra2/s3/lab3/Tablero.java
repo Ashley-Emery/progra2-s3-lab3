@@ -42,4 +42,44 @@ public class Tablero {
         return fijos[fila][col];
     }
     
+    public boolean setValor(int fila, int col, int valor){
+        
+        if( fijos[fila][col] )
+            return false;
+        
+        if( valor < 0 || valor > 9 )
+            return false;
+        
+        tablero[fila][col] = valor;
+        
+        return true;
+    }
+    
+    public void setValorVacio(int fila, int col){
+        
+        if( !fijos[fila][col] )
+            tablero[fila][col] = 0;
+        
+    }
+    
+    public void setMatrizSolucion(int[][] matriz){
+        
+        for (int fila = 0; fila < tamano; fila++) {
+            System.arraycopy(matriz[fila], 0, solucion[fila], 0, tamano);
+        }
+    }
+    
+    public void setMatrizTablero(int[][] matriz){
+        
+        for (int fila = 0; fila < tamano; fila++) {
+            System.arraycopy(matriz[fila], 0, tablero[fila], 0, tamano);
+            
+            for (int col = 0; col < tamano; col++) {
+                fijos[fila][col] = matriz[fila][col] != 0;
+            }
+        }
+    }
+    
+    
+    
 }
