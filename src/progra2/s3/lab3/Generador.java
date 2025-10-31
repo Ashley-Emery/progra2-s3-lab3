@@ -81,8 +81,8 @@ public class Generador
         }
 
         Tablero tablero = new Tablero();
-        tablero.setSolutionMatrix(solucion);
-        tablero.setPuzzleMatrix(tableroJuego);
+        tablero.setMatrizSolucion(solucion);
+        tablero.setMatrizTablero(tableroJuego);
         return tablero;
     }
 
