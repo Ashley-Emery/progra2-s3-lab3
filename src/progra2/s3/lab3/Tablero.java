@@ -15,6 +15,8 @@ public class Tablero {
     public final boolean[][] fijos = new boolean[tamano][tamano];
     public final int[][] solucion = new int[tamano][tamano];
     
+    public Tablero (){}
+    
     
     
 }
