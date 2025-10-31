@@ -30,6 +30,16 @@ public class Tablero {
         }
     }
     
+    public int getTamano(){
+        return tamano;
+    }
     
+    public int getValor(int fila, int col){
+        return tablero[fila][col];
+    }
+    
+    public boolean isFijo(int fila, int col){
+        return fijos[fila][col];
+    }
     
 }
