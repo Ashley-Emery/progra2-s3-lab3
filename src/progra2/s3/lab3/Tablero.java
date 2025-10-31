@@ -81,5 +81,55 @@ public class Tablero {
     }
     
     
+    public boolean isMovimientoValido(int fila, int col, int valor){
+        
+        if (valor < 1 || valor > 9)
+            return false;
+        
+        for (int i = 0; i < tamano; i++) {
+            
+            if (tablero[fila][i] == valor){
+                return false;
+            }
+            
+            if (tablero[i][col] == valor){
+                return false;
+            }
+        }
+        
+        int baseFila = (fila / 3) * 3;
+        int baseCol = (col / 3) * 3;
+        
+        for (int i = baseFila; i < baseFila + 3; i++) {
+            
+            for (int j = baseCol; j < baseCol + 3; j++) {
+                
+                if (tablero[i][j] == valor)
+                    return false;
+                
+            }
+        }
+        
+        return true;
+        
+    }
+    
+    public boolean isValorCorrecto(int fila, int col, int valor){
+        
+        return solucion[fila][col] == valor;
+    }
+    
+    public void aplicarSolucion(){
+        
+        for (int fila = 0; fila < tamano; fila++) {
+            
+            for (int col = 0; col < tamano; col++) {
+                
+                tablero[fila][col] = solucion[fila][col];
+                
+            }
+            
+        }
+    }
     
 }
