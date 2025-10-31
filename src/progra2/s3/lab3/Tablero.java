@@ -17,6 +17,19 @@ public class Tablero {
     
     public Tablero (){}
     
+    public Tablero(int[][] inicial, int[][] matrizSolucion){
+        
+        for(int fila = 0; fila < tamano; fila++){
+            for (int col = 0; col < tamano; col++) {
+                
+                tablero[fila][col] = inicial[fila][col];
+                fijos[fila][col] = inicial[fila][col] != 0;
+                solucion[fila][col] = matrizSolucion[fila][col];
+                
+            }
+        }
+    }
+    
     
     
 }
