@@ -8,6 +8,9 @@ package progra2.s3.lab3;
  *
  * @author ashley
  */
+
+import javax.swing.SwingUtilities;
+
 public class Progra2S3Lab3 {
 
     /**
@@ -15,6 +18,9 @@ public class Progra2S3Lab3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        SwingUtilities.invokeLater(Frame::new);
+        
     }
     
 }
